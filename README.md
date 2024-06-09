@@ -12,7 +12,7 @@ Step 2: Load and Prepare Data
 mnist = tf.keras.datasets.mnist
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
 
-# Normalize pixel values to be between 0 and 1
+#Normalize pixel values to be between 0 and 1
 train_images, test_images = train_images / 255.0, test_images / 255.0
 
 Step 3: Define Model
@@ -22,7 +22,7 @@ model = models.Sequential([
     layers.Dense(10, activation='softmax') # Output layer with 10 neurons (one for each digit), softmax activation
 ])
 
-# Compile the model
+#Compile the model
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
